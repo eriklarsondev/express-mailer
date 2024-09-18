@@ -3,7 +3,7 @@ import path from 'path'
 import colors from 'colors'
 import 'dotenv/config'
 
-import { mailer } from './mailer'
+import { mailer } from './mailer/module'
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -14,6 +14,9 @@ app.use(express.urlencoded({ extended: false }))
 
 // set view engine
 app.set('view engine', 'ejs')
+
+// set static directories
+app.use('/www', express.static(path.join(__dirname, '..', 'public')))
 
 app.use(mailer)
 

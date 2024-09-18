@@ -1,0 +1,57 @@
+html,
+body {
+  @apply overflow-x-hidden leading-6 bg-gray-900 font-sans font-light text-gray-400;
+}
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-5 leading-loose font-sans font-normal text-white;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4 {
+  @apply text-base;
+}
+
+h5 {
+  @apply text-sm;
+}
+
+h6 {
+  @apply text-xs;
+}
+
+p {
+  @apply mb-5;
+}
+
+strong {
+  @apply font-normal;
+}
+
+hr {
+  @apply my-8 border-t-2 border-gray-800 rounded-full;
+}
+
+::selection {
+  @apply bg-yellow-200 text-black;
+}
