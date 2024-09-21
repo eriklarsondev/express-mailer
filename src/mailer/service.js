@@ -23,9 +23,9 @@ export class MailerService {
       if (err) throw new Error(err)
 
       const config = {
-        from: `"Erik Larson" <${process.env.SMTP_USER}>`,
+        from: `"Express Mailer" <${process.env.SMTP_USER}>`,
         to: process.env.TARGET_EMAIL,
-        subject: 'Notification - Express Mailer',
+        subject: 'You have a new email',
         html: data
       }
 
