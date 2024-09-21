@@ -7,7 +7,8 @@ export class MailerController extends MailerService {
 
   async sendEmail(req, res, next) {
     try {
-      res.status(200).send('Hello, world!')
+      await super.sendEmail(req.body)
+      res.status(200).json({ statusCode: 200, message: 'Email has been sent successfully' })
     } catch (err) {
       next(err)
     }
