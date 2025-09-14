@@ -1,0 +1,28 @@
+{
+  "name": "express-mailer",
+  "version": "0.1.0",
+  "author": "Erik Larson",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "main": "dist-server/app.js",
+  "scripts": {
+    "babel": "babel src --out-dir dist-server ",
+    "build": "npm run babel",
+    "restart": "rimraf dist-server && npm run build && node dist-server/app.js",
+    "dev": "nodemon --exec npm run restart",
+    "start": "npm run build && node dist-server/app.js",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1"
+  }
+}
