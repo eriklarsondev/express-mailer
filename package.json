@@ -2,7 +2,7 @@
   "name": "express-mailer",
   "version": "0.1.0",
   "author": "Erik Larson",
-  "description": "",
+  "description": "A lightweight and efficient REST API built with Express for sending transactional emails via SMTP",
   "keywords": [],
   "license": "ISC",
   "main": "dist-server/app.js",
